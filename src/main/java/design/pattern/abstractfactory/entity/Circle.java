@@ -1,6 +1,6 @@
-package design.pattern.factory;
+package design.pattern.abstractfactory.entity;
 
-public class Square implements Shape {
+public class Circle implements Shape {
 
     @Override
     public void draw() {

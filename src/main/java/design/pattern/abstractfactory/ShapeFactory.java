@@ -1,13 +1,10 @@
-package design.pattern.factory;
+package design.pattern.abstractfactory;
 
-import design.pattern.factory.entity.Circle;
-import design.pattern.factory.entity.Rectangle;
-import design.pattern.factory.entity.Shape;
-import design.pattern.factory.entity.Square;
+import design.pattern.abstractfactory.entity.*;
 
-public class ShapeFactory {
+public class ShapeFactory extends AbstractFactory {
 
-    //使用 getShape 方法获取形状类型的对象
+    @Override
     public Shape getShape(String shapeType) {
         if (shapeType == null) {
             return null;
@@ -19,6 +16,11 @@ public class ShapeFactory {
         } else if (shapeType.equalsIgnoreCase("SQUARE")) {
             return new Square();
         }
+        return null;
+    }
+
+    @Override
+    public Color getColor(String color) {
         return null;
     }
 }
